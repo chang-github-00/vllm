@@ -70,7 +70,7 @@ class Sampler(nn.Module):
         logits = _get_logits(hidden_states, embedding, embedding_bias,
                              self.vocab_size)
 
-        logits = _apply_logits_processors(logits, sampling_metadata)
+        logits = _apply_logits_processors(logits, input_metadata)
         
         # Apply presence and frequency penalties.
         output_tokens = _get_output_tokens(input_metadata)
