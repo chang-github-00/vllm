@@ -1,5 +1,9 @@
 from vllm import LLM, SamplingParams
 
+
+def UncertaintyLogitsProcessor(input_ids, scores):
+    return scores
+
 # Sample prompts.
 prompts = [
     "Hello, my name is",
